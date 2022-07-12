@@ -10,7 +10,7 @@ return (
             Muhammad Bilal
         </h1>
     </div>
-    <div>
+    <div className='nav-div-link'>
     <span>
     <Link to="/" className='a nav-link'>PROFILE</Link>
     </span>

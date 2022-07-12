@@ -17,13 +17,17 @@ const About = () => {
                     <h1 className='myname mynameh1 Intro'>
                         I am a last-year student in the Computer Science Program and have been
                         enjoying learning different technology and programing languages like Html, CSS,
-                        Vanilla JavaScript, Nodejs, Express, Mongo DB, PHP, MY SQL, Android (Kotlin),
+                        Vanilla JavaScript, React Js,Node Js, Express Js, Mongo DB, PHP, MY SQL, Android (Kotlin),
                         Python (Pandas, NumPy), Flask, JAVA. And have made lots of projects using
                         different technology. Name of Some Projects are present on my resume also
                         there are some which I didn’t mention.
                     </h1>
                     <div className='intro-btn-div'>
-                        <button className='intro-btn'>Show Resume</button>
+                        <button className='intro-btn' onClick={()=>{
+                            // fetch('https://filesharewithall.herokuapp.com/download/088b3f8c-dce9-4f6a-9946-f1bc1a99707c')
+                            // .then(response => console.log('Ok'))
+                            window.open('https://filesharewithall.herokuapp.com/download/088b3f8c-dce9-4f6a-9946-f1bc1a99707c')
+                        }}>Download Resume</button>
                         <button className='intro-btn askmebtn' onClick={() => {
                             document.getElementById('ASKME').scrollIntoView()
                         }}>Ask Me..!</button>
@@ -33,6 +37,7 @@ const About = () => {
             <br />
             <br />
             <hr />
+            <br />
             <div id='ASKME'>
                 <div id="form">
                     <h1 style={{textAlign:"center"}}>Enter Details</h1>
@@ -42,7 +47,9 @@ const About = () => {
                     <input id="email" type="email" className="ask_inp" />
                     <label htmlFor="message" className="ask_label">Enter Your Message</label>
                     <textarea id="message" cols={30} rows={10} maxLength={300} className="ask_inp" placeholder="Word Limit 300" defaultValue={""} />
-                    <button id="ask-btn" className="intro-btn">Send Message</button>
+                    <button id="ask-btn" className="intro-btn" onClick={()=>{
+                        alert("Message Sending Not Avalible Right Now")
+                    }}>Send Message</button>
                 </div>
 
             </div>

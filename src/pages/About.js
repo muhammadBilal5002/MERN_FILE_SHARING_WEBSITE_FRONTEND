@@ -1,0 +1,55 @@
+import '../StyleSheet/index.css'
+import Myimg from '../images/MyImage.jpg'
+const About = () => {
+    return (
+        <>
+            <br />
+            <br />
+            <div className="about-div">
+                <img src={Myimg} alt="HELLaaO" className='intro-img' />
+                <div className='div'>
+                    <h1 className='introline'>
+                        Hi,
+                    </h1>
+                    <div className='myname-div'>
+                        <h1 className='myname'> My Name Is </h1><span className='myname bilal'>Muhammad Bilal</span>
+                    </div>
+                    <h1 className='myname mynameh1 Intro'>
+                        I am a last-year student in the Computer Science Program and have been
+                        enjoying learning different technology and programing languages like Html, CSS,
+                        Vanilla JavaScript, Nodejs, Express, Mongo DB, PHP, MY SQL, Android (Kotlin),
+                        Python (Pandas, NumPy), Flask, JAVA. And have made lots of projects using
+                        different technology. Name of Some Projects are present on my resume also
+                        there are some which I didn’t mention.
+                    </h1>
+                    <div className='intro-btn-div'>
+                        <button className='intro-btn'>Show Resume</button>
+                        <button className='intro-btn askmebtn' onClick={() => {
+                            document.getElementById('ASKME').scrollIntoView()
+                        }}>Ask Me..!</button>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <hr />
+            <div id='ASKME'>
+                <div id="form">
+                    <h1 style={{textAlign:"center"}}>Enter Details</h1>
+                    <label htmlFor="name" className="ask_label">Enter Your Name</label>
+                    <input id="name" type="text" className="ask_inp" />
+                    <label htmlFor="name" className="ask_label">Enter Your Email</label>
+                    <input id="email" type="email" className="ask_inp" />
+                    <label htmlFor="message" className="ask_label">Enter Your Message</label>
+                    <textarea id="message" cols={30} rows={10} maxLength={300} className="ask_inp" placeholder="Word Limit 300" defaultValue={""} />
+                    <button id="ask-btn" className="intro-btn">Send Message</button>
+                </div>
+
+            </div>
+
+        </>
+    )
+
+}
+
+export default About

@@ -8,7 +8,7 @@ let flag = false;
 const inrto_text = `I am a last-year student in the Computer Science Program and have been 
 enjoying learning different technology and programing languages like Html, CSS,
 Vanilla JavaScript, React Js,Node Js, Express Js, Mongo DB, PHP, MY SQL, Android (Kotlin),
-Python (Pandas, NumPy), Flask, JAVA. And have made lots of projects using
+Python (Pandas, NumPy), Flask, Java. And have made lots of projects using
 different technology. Name of Some Projects are present on my resume also
 there are some which I didn’t mention.`
 
@@ -16,9 +16,9 @@ const About = () => {
     return (
         <>
             <br />
-            <br />
+       
             <div className="about-div">
-                <img src={Myimg} alt="HELLaaO" className='intro-img' />
+                <img src={Myimg} alt="MyImage" className='intro-img' />
                 <div className='div'>
                     <h1 className='introline'>
                         Hi,
@@ -26,7 +26,7 @@ const About = () => {
                     <div className='myname-div'>
                         <h1 className='myname'> My Name Is </h1><span className='myname bilal'>Muhammad Bilal</span>
                     </div>
-                    <h1 className='myname mynameh1 Intro' id=''>
+                    <h1 className='myname mynameh1 Intro'>
                         <Typed className='MyIntro' strings={[inrto_text]} typeSpeed={30} style={{color:"red"}}/>
                     </h1>
                     <div className='intro-btn-div'>

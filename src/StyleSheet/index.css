@@ -136,7 +136,6 @@ display: block;
 .MyIntro{
     color: brown;
 }
-
 .ask_label{
     display: block;
     font-size: 20px;
@@ -196,6 +195,16 @@ display: block;
     align-items: center;
     flex-wrap: wrap;
 }
+
+/* pages/Project */
+#project{
+    background-color:   rgb(233, 230, 230);
+    margin: 20px 20px;
+}
+#project h3{
+    text-align: center;
+}
+/* pages/MyProject */
 @media only screen and (max-width:1008px) {
     .about-div{
         flex-wrap: wrap;

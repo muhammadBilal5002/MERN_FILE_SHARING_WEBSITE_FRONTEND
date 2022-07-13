@@ -33,7 +33,7 @@ const About = () => {
                         <button className='intro-btn' onClick={() => {
                             // fetch('https://filesharewithall.herokuapp.com/download/088b3f8c-dce9-4f6a-9946-f1bc1a99707c')
                             // .then(response => console.log('Ok'))
-                            window.open('https://filesharewithall.herokuapp.com/download/0a646b20-a6ca-4dbc-bec7-31e586c2645b')
+                            window.open('https://drive.google.com/u/0/uc?id=19gOc2U2l6eALxOOsQ8dWW4xsCivYMic7&export=download')
                         }}>Download Resume</button>
                         <button className='intro-btn askmebtn' onClick={() => {
                             document.getElementById('ASKME').scrollIntoView()

@@ -47,7 +47,7 @@ const projects = [
 const MyProject = () => {
     useEffect(()=>{
         setTimeout(()=>{
-            alert("Description And ScreenSoot Will Be Avalibale Soon")
+            alert("Description And ScreenShot Will Be Avalibale Soon")
         },20)
     },[])
     return (

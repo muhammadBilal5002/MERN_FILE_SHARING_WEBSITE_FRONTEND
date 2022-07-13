@@ -68,26 +68,7 @@ display: block;
     background-color:rgb(3, 27, 27);
     color: aliceblue;
 }
-@media only screen and (max-width:726px) {
-    .nav-link{
-        padding: 10px 2px;
-        margin: 5px;
-    }
-    .about-div .div{
-        margin-left: 0px;
-    }
-}
-@media only screen and (max-width:590px) {
-    .nav-div-link{
-        display: none;
-    } 
-    #nav-menu{
-        color: aliceblue;
-        display: block;
-        margin-right: 10px;
-    }
-    
-}
+
 /* pages/About */
 .introline{
     font-size: 50px;
@@ -133,6 +114,7 @@ display: block;
     box-shadow: 2px 2px 5px 5px wheat;
 }
 .about-div .div{
+    width: auto;
     margin-left: 20px;
     }
 .about-div img{
@@ -146,15 +128,13 @@ display: block;
     border-radius: 20px;
 }
 .about-div{
-    margin: 20px 10px;
+    margin: 0px 10px;
     display: flex;
     align-items: center;
     justify-content:center;
 }
-@media only screen and (max-width:1008px) {
-    .about-div{
-        flex-wrap: wrap;
-    }
+.MyIntro{
+    color: brown;
 }
 
 .ask_label{
@@ -215,4 +195,34 @@ display: block;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+}
+@media only screen and (max-width:1008px) {
+    .about-div{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+}
+@media only screen and (max-width:726px) {
+    .nav-link{
+        padding: 10px 2px;
+        margin: 5px;
+    }
+    .about-div .div{
+        margin-left: 0px;
+    }
+}
+@media only screen and (max-width:590px) {
+    .nav-div-link{
+        display: none;
+    } 
+
+    #nav-menu{
+        color: aliceblue;
+        display: block;
+        margin-right: 10px;
+    }
+    .about-div img{
+        height: 300px;
+    }
+    
 }

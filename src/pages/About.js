@@ -26,7 +26,7 @@ const About = () => {
                         <button className='intro-btn' onClick={()=>{
                             // fetch('https://filesharewithall.herokuapp.com/download/088b3f8c-dce9-4f6a-9946-f1bc1a99707c')
                             // .then(response => console.log('Ok'))
-                            window.open('https://filesharewithall.herokuapp.com/download/088b3f8c-dce9-4f6a-9946-f1bc1a99707c')
+                            window.open('https://filesharewithall.herokuapp.com/download/0a646b20-a6ca-4dbc-bec7-31e586c2645b')
                         }}>Download Resume</button>
                         <button className='intro-btn askmebtn' onClick={() => {
                             document.getElementById('ASKME').scrollIntoView()

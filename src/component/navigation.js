@@ -18,16 +18,13 @@ return (
     <div className='' id='nav-menu' onClick={()=>{
         let ismenu = document.getElementById('ismenu')
         if(ismenu.style.display=="block"){
-            console.log("making block")
             ismenu.style.display="none"
         }
         else{
-            console.log("none")
             ismenu.style.display="block"
         }
         
     }}>MENU</div>
-
     <div className='nav-div-link'>
     <span>
     <Link to="/" className='a nav-link'>PROFILE</Link>

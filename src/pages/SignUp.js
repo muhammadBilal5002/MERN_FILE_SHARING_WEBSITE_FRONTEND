@@ -13,6 +13,8 @@ function SignUp(){
   
   const signup = useCallback(()=>{
     btn.current.disabled = true
+    btn.current.innerText="Loading..."
+
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     setusername(username.trim())
     setemail(email.trim())
@@ -37,6 +39,7 @@ function SignUp(){
             }
             else{
               btn.current.disabled = false
+              btn.current.innerText="Register"
               alert("Email Address Already Exist")
             }
       }

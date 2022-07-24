@@ -12,7 +12,7 @@ function SignUp(){
   const [repassword, setrepassword] = useState("")
   
   const signup = useCallback(()=>{
-    btn.current.style.display = "none"
+    btn.current.disabled = true
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     setusername(username.trim())
     setemail(email.trim())
@@ -36,7 +36,7 @@ function SignUp(){
               navigation("/Login")
             }
             else{
-              btn.current.style.display = "block"
+              btn.current.disabled = false
               alert("Email Address Already Exist")
             }
       }

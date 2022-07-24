@@ -25,8 +25,8 @@ function Login() {
         if (isstatus) {
           localStorage.setItem("ID",data["result"]["_id"])
           alert("Login Successfully")
+           navigate("/")
           window.location.reload()
-          navigate("/")
         }
         else {
           alert("Worng Validation")

@@ -1,23 +1,21 @@
-import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Navigation from './component/navigation'
-import Home from './pages/Home'
-import About from './pages/About'
-import MyProject from './pages/MyProject'
-import Page_Not_Found from './pages/Page_Not_Found'
+import Home from "./pages/Home"
+import Working from "./pages/Working"
+import Login from "./pages/Login"
+import SignUp from "./pages/SignUp"
+import Error from "./pages/Error"
 const App = () => {
-useEffect(()=>{
-    alert("Website Is Under Construction")
-},[])
 return (
         <>
            <Router>
-            <Navigation/>
+            <Navigation Login={window.localStorage.getItem("ID")?"yes":"no"}/>
                 <Routes>
-                    <Route path='/'  element={<About/>}></Route>
-                    <Route path='/About' element={<Home/>}></Route>
-                    <Route path='/MyProject'  element={<MyProject/>}></Route>
-                    <Route path='*'  element={<Page_Not_Found/>}></Route> 
+                    <Route path='/'  element={<Home mainsize={window.localStorage.getItem("ID")?500:100}/>}></Route>
+                    <Route path='/Working' element={<Working />}></Route>
+                    <Route path='/Login' element={<Login />}></Route>
+                    <Route path='/SignUP' element={<SignUp />}></Route>
+                    <Route path='*' element={<Error/>}></Route>
                 </Routes>
             </Router>
         </>

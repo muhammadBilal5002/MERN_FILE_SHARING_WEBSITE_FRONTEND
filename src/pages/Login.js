@@ -10,6 +10,7 @@ function Login() {
   const [password, setpassword] = useState("")
   function login() {
     btn.current.disabled = true
+    btn.current.innerText="Loading..."
     setemail(email.trim())
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (email == "" || password.length < 5 || !email.match(validRegex)) {
@@ -32,6 +33,7 @@ function Login() {
         }
         else {
           btn.current.disabled = false
+          btn.current.innerText="Register"
           alert("Worng Validation")
         }
 

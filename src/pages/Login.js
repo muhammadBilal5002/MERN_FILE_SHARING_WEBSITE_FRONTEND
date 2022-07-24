@@ -33,7 +33,7 @@ function Login() {
         }
         else {
           btn.current.disabled = false
-          btn.current.innerText="Register"
+          btn.current.innerText="Login"
           alert("Worng Validation")
         }
 

@@ -30,11 +30,11 @@ return(
     </Link>
     </>:
     <>
-    <Link to="/Home">
+    <Link to="/">
         <button onClick={()=>{
             window.localStorage.removeItem("ID")
-            window.location.reload("/")
-            navigate("/")
+            window.location.reload()
+            
         }}>Logout</button>
     </Link>
     
@@ -65,8 +65,12 @@ return(
     </Link>
     </>
     :
-    <Link to="/Home">
-        <button>Logout</button>
+    <Link to="/">
+        <button  onClick={()=>{
+            window.localStorage.removeItem("ID")
+            window.location.reload()
+            
+        }}>Logout</button>
     </Link>
     
     }

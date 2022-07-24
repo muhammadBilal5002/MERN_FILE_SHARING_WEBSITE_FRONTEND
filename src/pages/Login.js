@@ -1,13 +1,15 @@
 import { useNavigate } from "react-router-dom"
-import { useState } from "react"
+import { useState,useRef } from "react"
 import myurl from "../component/url"
 let isstatus = false
 function Login() {
   const uploadURL = myurl + "loginuser"
+  const btn = useRef(null)
   const navigate = useNavigate()
   const [email, setemail] = useState("")
   const [password, setpassword] = useState("")
   function login() {
+    btn.current.disabled = true
     setemail(email.trim())
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (email == "" || password.length < 5 || !email.match(validRegex)) {
@@ -29,6 +31,7 @@ function Login() {
           window.location.reload()
         }
         else {
+          btn.current.disabled = false
           alert("Worng Validation")
         }
 
@@ -65,7 +68,7 @@ function Login() {
                   <a href="#!" className="text-body">Forgot password?</a>
                 </div>
                 <div className="text-center text-lg-start mt-4 pt-2">
-                  <button type="button" className="btn btn-primary btn-lg" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', borderRadius: "20px" }} onClick={login}>Login</button>
+                  <button type="button" className="btn btn-primary btn-lg" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', borderRadius: "20px" }} onClick={login} ref={btn}>Login</button>
                   <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <span style={{ cursor: "pointer" }} onClick={() => { navigate("/SignUp") }} className="link-danger">Register</span></p>
                 </div>
               </form>

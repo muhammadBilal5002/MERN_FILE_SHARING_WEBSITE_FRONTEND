@@ -9,14 +9,14 @@ function Login() {
   const [email, setemail] = useState("")
   const [password, setpassword] = useState("")
   function login() {
-    btn.current.disabled = true
-    btn.current.innerText="Loading..."
     setemail(email.trim())
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (email == "" || password.length < 5 || !email.match(validRegex)) {
       alert("Please Enter Valid Information")
     }
     else {
+      btn.current.disabled = true
+      btn.current.innerText="Loading..."
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

@@ -12,9 +12,6 @@ function SignUp(){
   const [repassword, setrepassword] = useState("")
   
   const signup = useCallback(()=>{
-    btn.current.disabled = true
-    btn.current.innerText="Loading..."
-
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     setusername(username.trim())
     setemail(email.trim())
@@ -23,6 +20,8 @@ function SignUp(){
      alert("Please Enter Valid Information")
     }
     else{
+    btn.current.disabled = true
+    btn.current.innerText="Loading..."
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
